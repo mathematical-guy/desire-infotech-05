@@ -1,0 +1,52 @@
+1. Create a list and provide atleast 2 examples of following actions:
+ 
+ - append
+ - insert
+ - remove
+ - pop
+ - index
+ - count
+
+ for e.g mylist = [1, 2, 3]
+ mylist.append(9)
+ mylist.extend([83, -5])
+ provide examples for actions too others too
+
+2. Create a list and provide atleast 2 examples of following actions:
+ - index
+ - count
+
+ for e.g mytuple = (1, 2, 3, 1)
+ mytuple.count(1)
+ mytuple.index(2)
+ provide examples for actions too others too
+
+3. Create a dictionary and provide atleast 2 examples of following actions:
+ - keys
+ - values
+ - get
+
+ for e.g mydictionary = {
+    "roll_no": 31,
+    "name": "Mohit",
+    "address": "Ahmedabad",
+    "father_name": "XYZ",
+ }
+ mydictionary.keys()
+ mydictionary.get('roll_no')
+ provide examples for actions too others too
+
+4. As list, tuple and dictionary are collection of objects and objects 
+ can be of any data type (string, int, float, tuple, list, dictionary).
+ Create 2 examples of following structure
+  - list inside list
+  - tuple inside list
+  - dictionary inside list
+  
+  - list inside tuple
+  - tuple inside tuple
+  - dictionary inside tuple
+
+  - list inside dictionary
+  - tuple inside dictionary
+  - dictionary inside dictionary
