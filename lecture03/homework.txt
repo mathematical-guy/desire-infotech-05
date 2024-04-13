@@ -1,0 +1,14 @@
+
+
+Write 2 examples of if-elif-else statements with user input
+Write 2 examples of for loop as:
+ - one without range
+ - one with range
+
+
+As shown in ice_cream_price.py file, create a similar example of your choice
+You can choose:
+  - Mobile Phone prices according to brand
+  - Vegetable selection
+  - Car selection
+  - Makeup accessories selection
