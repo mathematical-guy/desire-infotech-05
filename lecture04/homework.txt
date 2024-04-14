@@ -1,0 +1,30 @@
+1) Using for loop create multiplication table for the number entered by the user
+e.g.
+ User enters 5, display the multiplication table for 5
+
+ 5 * 1 = 5
+ 5 * 2 = 10
+ 5 * 3 = 15
+ 5 * 4 = 20
+ ...
+
+2) For a list of prices spent in MacD, 
+calculate and show their respective GSTs and 
+total price to be paid by the user
+
+ITEM            Price           GST
+Fries:            50            50 * 18/100
+Burger:           70            70 * 18/100
+Coke:             25            25 * 18/100
+Pizza:            85            85 * 18/100
+
+
+3) Create multiple functions for calculate perimeter of following
+shapes. Create different functions for every shape.
+
+Shape                       Formula
+-----------------------------------
+Circle                      2*PI*r
+Square                      4*L
+Triangle                    Side1 + Side2 + Side3
+
