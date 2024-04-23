@@ -1,0 +1,6 @@
+
+1. Give two function examples with type hinting like
+  def calculate_square_area(length: float, breadth: float) -> float:
+      return length * breadth
+
+2. Give an example of use of a function from a library like os/math etc.
