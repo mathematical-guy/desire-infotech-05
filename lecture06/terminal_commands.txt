@@ -1,0 +1,7 @@
+ls => list all the files
+
+cd => change directory
+ e.g cd folder1  (changes location to folder1)
+
+mkdir => creates a new folder
+ e.g mkdir xyz   (creates a folder name xyz)
