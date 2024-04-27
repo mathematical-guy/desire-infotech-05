@@ -1,0 +1,2 @@
+Create 3 examples of classes without static variables
+Create 3 more examples of classes with static variables
