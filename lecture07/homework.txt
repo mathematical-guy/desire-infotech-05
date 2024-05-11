@@ -1,0 +1,3 @@
+1) Create one class and use __init__ method 
+2) Create a django project using django-admin startproject <project_name>
+
