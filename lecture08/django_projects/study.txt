@@ -1,0 +1,94 @@
+Steps to create a django project any 
+1) Step 1: Run one of following command
+ - django-admin startproject <project_name>
+ - python -m django-admin startproject <project_name>
+ - python -m django startproject <project_name>
+
+This will create a django project with below structure
+    project_name
+         |
+         |
+         |-------- manage.py                     [Manages the project actions]
+         |
+         |
+         |-------- project_name
+                        |
+                        |--------- settings.py   [All settings of the project]
+                        |
+                        |--------- urls.py       [All urls of the project]
+
+
+2) Step 2: Run runserver command to check django project is setup properly
+   >> python manage.py runserver
+
+Output: 
+    Watching for file changes with StatReloader
+    Performing system checks...
+
+    System check identified no issues (0 silenced).
+
+    You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+    Run 'python manage.py migrate' to apply them.
+    May 13, 2024 - 08:26:58
+    Django version 3.2, using settings 'project_name.settings'
+    Starting development server at http://127.0.0.1:8000/
+    Quit the server with CTRL-BREAK.
+
+Visit http://127.0.0.1:8000/ at browser and you will se a rocket animation, 
+it means django project setup is done.
+
+3) Create a view (function) in urls.py and add it's url in urlpatterns
+inside urls.py
+
+from django.http import HttpResponse
+
+def home_page(request):
+    return HttpResponse("<h1> This is the Home Page </h1>)
+
+
+urlpatterns = [
+    path('admin'/, admin.site.urls),
+
+    path('home/', home_page),      <-------- your added url
+]
+
+visit at http://127.0.0.1:8000/home/ you will see your Output of view
+
+
+4) Create a folder anywhere in the project 
+(prefer creating inside the outer project directory, where manage.py is already there)
+Add file location in DIRS of TEMPLATES list inside settings.py
+
+TEMPLATES = [
+    {
+        ...
+        'DIRS': [r"YOUR_FOLDER_PATH"]
+        ...
+    }
+]
+
+
+Create a template(html) file in YOUR_FOLDER_PATH. For e.g myfile.html
+
+<html>
+    <body>
+        <h1>This is My File page<h1>
+        <p>Welcome to Desire Infotech</p>
+    </body>
+</html>
+
+
+Create a view inside urls which will return render this html file as
+
+
+from django.shortcuts import render
+
+def myfile_view(request):
+    return render(request, 'myfile.html')
+
+
+urlpatterns = [
+    ...
+    path('desire/', myfile_view),           <----------- New view with URL is added
+    ...
+]
