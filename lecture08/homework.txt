@@ -1,0 +1,4 @@
+
+Create 2 django projects both should have atleast 5 views
+
+You can follow study.txt file for helps and instructions
