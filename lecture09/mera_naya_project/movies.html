@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        </style>
+</head>
+<body>
+    <h1>Movies List 🍿🍿</h1>
+    <table>
+        <!-- This is a Head -->
+        <thead>
+            <td>Year</td>
+            <td>Movie Name</td>
+            <td>Director</td>
+        </thead>
+
+    
+        <!-- This is a body -->
+        <tbody>
+            <tr>
+                <td>1999</td>
+                <td>Kaala Paani</td>
+                <td>ABC</td>
+            </tr>
+            <tr>
+                <td>2000</td>
+                <td>Hera Pheri</td>
+                <td>PriyaDarshan</td>
+            </tr>
+            <tr>
+                <td>2015</td>
+                <td>Avengers</td>
+                <td>Marvel</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Movie list ke upar ghum raha hai -->
+    {% for a in movies %}
+        <!-- "a" ek ek movie hogi jo ki ek ek dictionary hogi -->
+        <!-- Ek ek movie ki dictionary ki values pe -->
+        {% for x, z in a.items %}
+        <!-- "x" movie ki ek ek key -->
+        <!-- "z" movie ki ek ek value -->
+        {{x}}: {{z}}
+        {% endfor %}
+        
+        <hr>
+        <br>
+    {% endfor %}
+</body>
+</html>
