@@ -1,0 +1,7 @@
+1) Create a new django project using django-admin startproject myproject
+
+2) Create 5 HTML files with their views, each should have context in it
+
+3) For 1 HTML file create table using static HTML
+
+4) Using for loop in django template langugage {% for %} iterate over 2 lists

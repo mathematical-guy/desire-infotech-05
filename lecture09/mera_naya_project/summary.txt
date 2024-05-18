@@ -1,0 +1,12 @@
+
+
+Django Templating Language (DTL)
+
+Inside HTML a changing data can be displayed  as {{ variable_name }}
+
+Iterating over a list
+
+{% for item in items_list %}
+<li> {{ item }} </li>      # display li tag with item name
+{% endfor %}
+
