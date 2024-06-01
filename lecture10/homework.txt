@@ -1,0 +1,5 @@
+
+1) Give two examples of Try-Except blocks
+2) Write Two base (parent) class, and give example of 
+Multiple & Multiple inheritance for respective classes.
+ 
