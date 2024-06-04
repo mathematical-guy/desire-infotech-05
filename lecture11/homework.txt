@@ -1,0 +1,17 @@
+
+
+1) 5 examples of list comprehension
+  - 1 normal
+  - 2 with if condition
+  - 2 with if and else condition
+
+2) 1 decorator example 
+  - time calculate
+
+3) 1 file handling program
+  - r+ mode
+
+4) 3 lambda function
+  - 1 map
+  - 1 reduce
+  - filter
