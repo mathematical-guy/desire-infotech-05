@@ -1,0 +1,35 @@
+python manage.py startapp <your_app_name>  <- This will create an Django App (folder)
+
+NOTE: After creating an app, add it in list INSTALLED_APPS in settings.py file
+
+ - models.py -> Create all models related to app
+ - views.py  -> Create views (actions) to handle logic related to models
+ - admin.py  -> Registering & Displaying models in Django Admin Panel
+
+
+python manage.py makemigrations            <- Generates migration file for changes in models.py
+
+python manage.py migrate                   <- Executes migrations applied in makemigrations command
+
+
+python manage.py createsuperuser           <- Creates a admin/super user, which has all access
+
+
+python manage.py shell                     <- Opens a Django shell (similar to Python), where 
+                                              we can interact with models 
+
+
+------------------------------------------------------------------------------------
+In admin.py file
+
+admin.site.register(Model Name)            <- Registers the model in Django Admin Panel
+
+
+------------------------------------------------------------------------------------
+In models.py
+Fields provided by Django
+CharField             <- String field with max length restrictions
+IntegerField          <- Integer field to store Integers
+DateField             <- To store the Dates 
+TimeField             <- To store the Time 
+DateTimeField         <- To store the Time 
