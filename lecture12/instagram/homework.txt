@@ -1,0 +1,41 @@
+NOTE: FOLLOWING CHEATSHEET FILE FOR COMMANDS & INSTRUCTIONS
+
+Create 2 Django App using
+    python manage.py startapp app_name and add in list INSTALLED_APPS in settings.py file
+
+Create 2 models for both the Apps, total 4 models
+for e.g
+    app: profile
+    models: Account:
+            name = CharField()
+            age = CharField()
+            country = CharField()
+
+
+            Message:
+            sender_name = CharField()
+            receiver_name = CharField()
+            text = TextField()
+            is_deleted = BooleanField()     # Try this
+            sent_on = DateTimeField()
+
+    app: shopping
+    models: Product:
+            name = CharField()
+            price = IntegerField()
+            brand = CharField()
+            manufacturer = CharField()
+            type = CharField()
+            is_available = BooleanField()   # Try this
+
+            Review:
+            reviewed_by = CharField()
+            reviwed_on = DateTimeField()
+            text = TextField()
+            
+
+Register models in admin.py using admin.site.register(ModelName)
+
+
+
+ 
