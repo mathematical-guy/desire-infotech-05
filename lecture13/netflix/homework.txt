@@ -1,0 +1,25 @@
+Create a new django project and add a Model Form
+
+class MyModel(models.Model):
+    field1 = models.CharField()
+    field2 = models.BooleanField()
+
+
+
+class MyForm(forms.ModelForm):
+    class Meta:
+        model = MyModel
+        fields = "__all__"
+
+
+def myview(request):
+    form = MyForm()
+    return render(request, "myfile.html", context={"myform": form,})
+
+Inside Html page
+{{myform.as_p}}
+
+
+Use request.method to check Method Type (GET/POST)
+request.POST to get data from POST request
+request.GET to get data from GET request
