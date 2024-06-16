@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        <label for="name">Enter Movie Name</label>
+        <input type="text" name="name">
+
+        <button type="submit">Search</button>
+
+    </form>
+    {% for movie in movies %}
+        Name: {{movie.name}} <br>
+        Type: {{movie.type}} <br>
+        Release Date: {{movie.release_date}} <br>
+        <hr>
+        <hr>
+        <hr>
+    {% endfor %}
+</body>
+</html>

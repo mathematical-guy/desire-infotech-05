@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form method="post">
+    {% csrf_token %}
+  <label for="name">Name:</label><br>
+  <input type="text" name="name"><br>
+
+  <label for="type">Type:</label><br>
+  <input type="text" name="type"><br>
+  
+  <label for="release_date">Release Date:</label><br>
+  <input type="date" name="release_date"><br>
+
+
+
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
+
