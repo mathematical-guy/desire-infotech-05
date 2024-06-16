@@ -1,0 +1,12 @@
+Create a Model of your choice (Cricketer/Movie/Book/Stock)
+
+Register the model in Admin Panel
+
+Create a HTML page with a view which displays all objects of your model
+
+Use Model.objects.all()                 for displaying all objects
+
+
+Give a textbox to user to search among the all the objects
+Use Model.objects.filter(**conditions)  for displaying filtered objects
+

@@ -1,0 +1,54 @@
+
+All objects of a Model
+
+Model.objects.all()     Returns "list" of all objects
+
+e.g Cricketer.objects.all()         gives list of all the Cricketers stored in table Cricketer
+
+
+Fitler objects on some conditions
+Model.objects.filter(condition1, condition2)     Returns "list" of matching conditions objects 
+
+e.g Cricketer.objects.filter(name="Virat", birth_date="1980-10-10")
+
+
+Field Lookups are used to enhance filter functionality
+
+
+__exact (default Lookup) ==> checks exact spelling and case sensitivity
+Cricketer.objects.filter(name__exact="Virat")       # All Cricketers list with name = Virat
+
+__iexact ==> checks exact spelling and but ignores case sensitivity
+Cricketer.objects.filter(name__iexact="Virat")       # All Cricketers list with name = Virat/VIRAT/virAT etc
+
+__contains ==> word contains and but also check case sensitivity
+Cricketer.objects.filter(name__contains="Virat")       # All Cricketers list with name containing Virat (Virat/SamVirat) etc
+
+__icontains ==> word contains and ignores case sensitivity
+Cricketer.objects.filter(name__icontains="virat")       # All Cricketers list with name containing virat (Virat/SamVirat/VIRAT/SamVIRAT)  etc
+
+(valid for Integer/DateField/DateTimeField etc)
+__gt ==> greater than but not equal to 
+Cricketer.objects.filter(runs__gt=200)          # All crickter list with runs greater than 200 but not equal to 200
+
+__gte ==> greater than & equal to 
+Cricketer.objects.filter(runs__gte=200)          # All crickter list with runs greater than or equal to 200
+
+__lt ==> less than but not equal to 
+
+__lte ==> less than & equal to 
+
+__range ==> less than but not equal to 
+Cricketer.objects.filter(runs__range=(200, 800))          # All crickter list with runs greater than 200  but less than 800
+
+
+__year, __date, __month,        valid for DateField
+__hour, __minutes, __seconds,        valid for Time and DateTime Fields
+
+
+
+ 
+
+
+
+
