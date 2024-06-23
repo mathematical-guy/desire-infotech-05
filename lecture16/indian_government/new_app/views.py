@@ -29,7 +29,7 @@ def device_detail(request, deffdfd):
 
 
 
-
+# ------------------------- CLASS BASED VIEWs -------------------
 class DeviceView(views.View):
     # def post(self, request):
     #     print(request.POST)
@@ -54,6 +54,7 @@ class IndianView(views.View):
     
 
 
+# --------------------- Generic Class Based View --------------
 class DeviceListView(ListView):
     model = Device
     template_name = 'devices-list.html'

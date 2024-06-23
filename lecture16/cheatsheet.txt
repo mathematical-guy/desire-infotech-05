@@ -1,0 +1,105 @@
+* In Django relations between multiple models(tables) can be made by:
+Two mandatory attributes required for making relations are:
+  - to => reference to which table
+  - on_delete => what to do when model a related object is deleted 
+      CASCADE  => delete the dependent objects
+      SET_NULL => set a default null value in the dependent objects
+      PROTECT  => don't allow to delete the related object, if it has dependent objects
+  - related_name => if wabt ti access dependent object from related object
+
+Suppose there are two models (tables), ModelA & ModelB
+
+
+
+class ModelA(models.Model):
+    field_a_1 = models.CharField()
+      .
+      .
+      .
+
+
+
+ - OneToOneField one object of ModelB should have one object of ModelA
+   class ModelB(models.Model):
+    field_a = models.OneToOneField(to=ModelA, on_delete=models.CASCADE)
+    field_b_1 = models.CharField()
+      .
+      .
+      .
+
+ - ForeignKey one object of ModelB can have one or more object(s) of ModelA
+   class ModelB(models.Model):
+    field_a = models.ForeignKey(to=ModelA, on_delete=models.CASCADE)
+    field_b_1 = models.CharField()
+      .
+      .
+      .
+
+ - ManyToManyField multiple objects of ModelB can have one or more object(s) of ModelA
+   class ModelB(models.Model):
+    field_a = models.ManyToManyField(to=ModelA, on_delete=models.CASCADE)
+    field_b_1 = models.CharField()
+      .
+      .
+      .
+
+----------------------------------------------------------------------------------------
+
+* Getting particular fields for a queryset
+Model.objects.all() -> This will get all the fields of Model
+
+Model.objects.values_list('field1', 'field2')  -> This will only get fields [field1, field2] of the Model but in tuple form
+Model.objects.values('field1', 'field2')  -> This will only get fields [field1, field2] of the Model but in dictionary form
+
+Choosing particular fields will give faster and hidden results, which depends upon the usecase.
+
+
+----------------------------------------------------------------------------------------
+
+* Class Based Views
+As we can define functions views, we have to handle both POST/GET method logic, in one
+function, which can be difficult to maintain. Django allows us to create a Class view,
+and separate the logic of both HTTP methods (GET/POST) in different functions.
+
+Function based view
+def product_view(request):
+    if request.method == "GET":
+        products = Product.objects.all()
+        return render(request, 'product.html', context={'products': products})
+    
+    if request.method == "POST":
+        # logic for POST
+
+
+Class Based View converted for above function based view
+
+from django import views
+class ProductView(views.View):
+    def get(self, request):
+        products = Product.objects.all()
+        return render(request, 'product.html', context={'products': products})
+    def post(self, request):
+        # logic for POST
+
+
+------------------------------------------------------------------------------------------
+* Generic Views
+We know using classes, can help us to write code in structure format while using OOPS concepts
+like Inheritance, Class Based Views also allow us to do so in. 
+For all of Web App projects, it has only following actions LCRUD
+
+L   Listing
+C   Create
+R   Read
+U   Update
+D   Delete
+
+Generic views has already written logic for all of these actions, we just need to provide
+model & template names, for e.g.
+
+from django.views.generics import ListView
+class ProductList(ListView):
+    model = Product
+    template_name = "product-list-page.html"
+    context_object_name = "product_list"        # Not mandatory
+
