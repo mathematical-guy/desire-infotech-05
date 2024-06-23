@@ -98,8 +98,13 @@ Generic views has already written logic for all of these actions, we just need t
 model & template names, for e.g.
 
 from django.views.generics import ListView
-class ProductList(ListView):
+class ProductListView(ListView):
     model = Product
     template_name = "product-list-page.html"
     context_object_name = "product_list"        # Not mandatory
 
+
+
+in urls.py file, add following path 
+
+path('products', ProductListView.as_view())

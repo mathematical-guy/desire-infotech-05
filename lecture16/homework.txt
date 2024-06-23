@@ -1,0 +1,8 @@
+
+Using CHEATSHEET, write code for displaying relations between models
+ - OneToOneField
+ - ForeignKey
+
+
+Not mandatory following, but extra marks if done
+Create a class based view inheriting from ListView [Can refer CHEATSHEET]
